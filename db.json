@@ -1,0 +1,503 @@
+{
+  "users": [
+    {
+      "_id": "1",
+      "name": "John Super Admin",
+      "email": "john@eleguard.com",
+      "phoneNumber": 712345678,
+      "isAdmin": true,
+      "isSuperAdmin": true,
+      "createdUsers": ["2", "3", "4"],
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-15T10:00:00Z",
+      "updatedAt": "2024-01-15T10:00:00Z"
+    },
+    {
+      "_id": "2",
+      "name": "Sarah Admin",
+      "email": "sarah@eleguard.com",
+      "phoneNumber": 723456789,
+      "isAdmin": true,
+      "isSuperAdmin": false,
+      "createdBy": "1",
+      "createdUsers": ["5", "6"],
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-20T10:00:00Z",
+      "updatedAt": "2024-01-20T10:00:00Z"
+    },
+    {
+      "_id": "3",
+      "name": "Mike Admin",
+      "email": "mike@eleguard.com",
+      "phoneNumber": 734567890,
+      "isAdmin": true,
+      "isSuperAdmin": false,
+      "createdBy": "1",
+      "createdUsers": ["7"],
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-22T10:00:00Z",
+      "updatedAt": "2024-01-22T10:00:00Z"
+    },
+    {
+      "_id": "4",
+      "name": "Alice Manager",
+      "email": "alice@eleguard.com",
+      "phoneNumber": 745678901,
+      "isAdmin": false,
+      "createdBy": "1",
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-23T10:00:00Z",
+      "updatedAt": "2024-01-23T10:00:00Z"
+    },
+    {
+      "_id": "5",
+      "name": "Bob Operator",
+      "email": "bob@eleguard.com",
+      "phoneNumber": 756789012,
+      "isAdmin": false,
+      "createdBy": "2",
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-24T10:00:00Z",
+      "updatedAt": "2024-01-24T10:00:00Z"
+    },
+    {
+      "_id": "6",
+      "name": "Carol Technician",
+      "email": "carol@eleguard.com",
+      "phoneNumber": 767890123,
+      "isAdmin": false,
+      "createdBy": "2",
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-25T10:00:00Z",
+      "updatedAt": "2024-01-25T10:00:00Z"
+    },
+    {
+      "_id": "7",
+      "name": "David Monitor",
+      "email": "david@eleguard.com",
+      "phoneNumber": 778901234,
+      "isAdmin": false,
+      "createdBy": "3",
+      "isVerified": true,
+      "password": "password123",
+      "createdAt": "2024-01-26T10:00:00Z",
+      "updatedAt": "2024-01-26T10:00:00Z"
+    }
+  ],
+  "invitations": [
+    {
+      "email": "test@example.com",
+      "otp": "123456",
+      "createdBy": "1",
+      "expiresAt": "2024-01-26T10:00:00.000Z"
+    }
+  ],
+  "customers": [
+    {
+      "_id": "1",
+      "name": "Maasai Wildlife Conservancy",
+      "email": "contact@maasaiwildlife.org",
+      "phoneNumber": "0712345678",
+      "location": "Maasai Mara, Kenya",
+      "devices": ["1", "2", "3"],
+      "createdAt": "2024-01-10T08:00:00Z",
+      "updatedAt": "2024-01-10T08:00:00Z"
+    },
+    {
+      "_id": "2",
+      "name": "Amboseli Elephant Trust",
+      "email": "info@amboselielephants.org",
+      "phoneNumber": "0723456789",
+      "location": "Amboseli National Park, Kenya",
+      "devices": ["4", "5"],
+      "createdAt": "2024-01-12T09:00:00Z",
+      "updatedAt": "2024-01-12T09:00:00Z"
+    },
+    {
+      "_id": "3",
+      "name": "Tsavo Conservation Area",
+      "email": "admin@tsavoconservation.org",
+      "phoneNumber": "0734567890",
+      "location": "Tsavo National Park, Kenya",
+      "devices": ["6", "7"],
+      "createdAt": "2024-01-14T11:00:00Z",
+      "updatedAt": "2024-01-14T11:00:00Z"
+    },
+    {
+      "_id": "4",
+      "name": "Samburu National Reserve",
+      "email": "info@samburu.org",
+      "phoneNumber": "0745678901",
+      "location": "Samburu, Kenya",
+      "devices": ["8"],
+      "createdAt": "2024-01-16T11:00:00Z",
+      "updatedAt": "2024-01-16T11:00:00Z"
+    },
+    {
+      "_id": "5",
+      "name": "Laikipia Wildlife Forum",
+      "email": "contact@laikipia.org",
+      "phoneNumber": "0756789012",
+      "location": "Laikipia, Kenya",
+      "devices": ["9"],
+      "createdAt": "2024-01-18T11:00:00Z",
+      "updatedAt": "2024-01-18T11:00:00Z"
+    }
+  ],
+  "devices": [
+    {
+      "_id": "1",
+      "serialNumber": "EG-001-2024",
+      "isUsed": true,
+      "customerId": "1",
+      "customerName": "Maasai Wildlife Conservancy",
+      "location": "Sector A - North Boundary",
+      "batteryLevel": 85,
+      "lastSeen": "2024-01-25T14:30:00Z",
+      "status": "active",
+      "listToBeNotified": [
+        { "name": "James Kimani", "phoneNumber": "0712345678" },
+        { "name": "Mary Wanjiku", "phoneNumber": "0723456789" }
+      ],
+      "createdAt": "2024-01-10T08:00:00Z",
+      "updatedAt": "2024-01-25T14:30:00Z"
+    },
+    {
+      "_id": "2",
+      "serialNumber": "EG-002-2024",
+      "isUsed": true,
+      "customerId": "1",
+      "customerName": "Maasai Wildlife Conservancy",
+      "location": "Sector B - East Boundary",
+      "batteryLevel": 92,
+      "lastSeen": "2024-01-25T15:00:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "James Kimani", "phoneNumber": "0712345678" } ],
+      "createdAt": "2024-01-10T08:00:00Z",
+      "updatedAt": "2024-01-25T15:00:00Z"
+    },
+    {
+      "_id": "3",
+      "serialNumber": "EG-003-2024",
+      "isUsed": true,
+      "customerId": "1",
+      "customerName": "Maasai Wildlife Conservancy",
+      "location": "Sector C - South Boundary",
+      "batteryLevel": 23,
+      "lastSeen": "2024-01-25T12:00:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Mary Wanjiku", "phoneNumber": "0723456789" } ],
+      "createdAt": "2024-01-10T08:00:00Z",
+      "updatedAt": "2024-01-25T12:00:00Z"
+    },
+    {
+      "_id": "4",
+      "serialNumber": "EG-004-2024",
+      "isUsed": true,
+      "customerId": "2",
+      "customerName": "Amboseli Elephant Trust",
+      "location": "Observation Point Alpha",
+      "batteryLevel": 67,
+      "lastSeen": "2024-01-25T13:45:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Dr. Joyce Poole", "phoneNumber": "0734567890" } ],
+      "createdAt": "2024-01-12T09:00:00Z",
+      "updatedAt": "2024-01-25T13:45:00Z"
+    },
+    {
+      "_id": "5",
+      "serialNumber": "EG-005-2024",
+      "isUsed": true,
+      "customerId": "2",
+      "customerName": "Amboseli Elephant Trust",
+      "location": "Observation Point Beta",
+      "batteryLevel": 78,
+      "lastSeen": "2024-01-25T16:20:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Dr. Joyce Poole", "phoneNumber": "0734567890" } ],
+      "createdAt": "2024-01-12T09:00:00Z",
+      "updatedAt": "2024-01-25T16:20:00Z"
+    },
+    {
+      "_id": "6",
+      "serialNumber": "EG-006-2024",
+      "isUsed": true,
+      "customerId": "3",
+      "customerName": "Tsavo Conservation Area",
+      "location": "Tsavo East - Galana River",
+      "batteryLevel": 78,
+      "lastSeen": "2024-01-25T16:20:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Peter Mbugua", "phoneNumber": "0745678901" } ],
+      "createdAt": "2024-01-14T11:00:00Z",
+      "updatedAt": "2024-01-25T16:20:00Z"
+    },
+    {
+      "_id": "7",
+      "serialNumber": "EG-007-2024",
+      "isUsed": true,
+      "customerId": "3",
+      "customerName": "Tsavo Conservation Area",
+      "location": "Tsavo West - Mzima Springs",
+      "batteryLevel": 45,
+      "lastSeen": "2024-01-25T11:30:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Peter Mbugua", "phoneNumber": "0745678901" } ],
+      "createdAt": "2024-01-14T11:00:00Z",
+      "updatedAt": "2024-01-25T11:30:00Z"
+    },
+    {
+      "_id": "8",
+      "serialNumber": "EG-008-2024",
+      "isUsed": true,
+      "customerId": "4",
+      "customerName": "Samburu National Reserve",
+      "location": "Ewaso Nyiro River",
+      "batteryLevel": 89,
+      "lastSeen": "2024-01-25T17:00:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Samuel Lekishon", "phoneNumber": "0756789012" } ],
+      "createdAt": "2024-01-16T11:00:00Z",
+      "updatedAt": "2024-01-25T17:00:00Z"
+    },
+    {
+      "_id": "9",
+      "serialNumber": "EG-009-2024",
+      "isUsed": true,
+      "customerId": "5",
+      "customerName": "Laikipia Wildlife Forum",
+      "location": "Laikipia Plateau",
+      "batteryLevel": 56,
+      "lastSeen": "2024-01-25T14:15:00Z",
+      "status": "active",
+      "listToBeNotified": [ { "name": "Grace Wanjiru", "phoneNumber": "0767890123" } ],
+      "createdAt": "2024-01-18T11:00:00Z",
+      "updatedAt": "2024-01-25T14:15:00Z"
+    },
+    {
+      "_id": "10",
+      "serialNumber": "EG-010-2024",
+      "isUsed": false,
+      "batteryLevel": 100,
+      "status": "inactive",
+      "createdAt": "2024-01-20T10:00:00Z",
+      "updatedAt": "2024-01-20T10:00:00Z"
+    },
+    {
+      "_id": "11",
+      "serialNumber": "EG-011-2024",
+      "isUsed": false,
+      "batteryLevel": 100,
+      "status": "inactive",
+      "createdAt": "2024-01-21T10:00:00Z",
+      "updatedAt": "2024-01-21T10:00:00Z"
+    },
+    {
+      "_id": "12",
+      "serialNumber": "EG-012-2024",
+      "isUsed": false,
+      "batteryLevel": 100,
+      "status": "inactive",
+      "createdAt": "2024-01-22T10:00:00Z",
+      "updatedAt": "2024-01-22T10:00:00Z"
+    }
+  ],
+  "alerts": [
+    {
+      "_id": "1",
+      "deviceId": "3",
+      "customerId": "1",
+      "type": "low_battery",
+      "severity": "high",
+      "message": "Device EG-003-2024 battery level critically low (23%)",
+      "location": "Sector C - South Boundary",
+      "timestamp": "2024-01-25T12:00:00Z",
+      "acknowledged": false
+    },
+    {
+      "_id": "2",
+      "deviceId": "1",
+      "customerId": "1",
+      "type": "intrusion",
+      "severity": "critical",
+      "message": "Elephant intrusion detected at North Boundary",
+      "location": "Sector A - North Boundary",
+      "timestamp": "2024-01-25T14:30:00Z",
+      "acknowledged": true,
+      "acknowledgedBy": "James Kimani",
+      "acknowledgedAt": "2024-01-25T14:35:00Z"
+    },
+    {
+      "_id": "3",
+      "deviceId": "7",
+      "customerId": "3",
+      "type": "low_battery",
+      "severity": "medium",
+      "message": "Device EG-007-2024 battery level low (45%)",
+      "location": "Tsavo West - Mzima Springs",
+      "timestamp": "2024-01-25T10:00:00Z",
+      "acknowledged": true,
+      "acknowledgedBy": "Peter Mbugua",
+      "acknowledgedAt": "2024-01-25T10:15:00Z"
+    },
+    {
+      "_id": "4",
+      "deviceId": "4",
+      "customerId": "2",
+      "type": "intrusion",
+      "severity": "high",
+      "message": "Large elephant herd detected near water source",
+      "location": "Observation Point Alpha",
+      "timestamp": "2024-01-25T16:45:00Z",
+      "acknowledged": false
+    },
+    {
+      "_id": "5",
+      "deviceId": "8",
+      "customerId": "4",
+      "type": "device_offline",
+      "severity": "medium",
+      "message": "Device EG-008-2024 has been offline for 2 hours",
+      "location": "Ewaso Nyiro River",
+      "timestamp": "2024-01-25T15:00:00Z",
+      "acknowledged": false
+    },
+    {
+      "_id": "6",
+      "deviceId": "2",
+      "customerId": "1",
+      "type": "maintenance",
+      "severity": "low",
+      "message": "Scheduled maintenance reminder for EG-002-2024",
+      "location": "Sector B - East Boundary",
+      "timestamp": "2024-01-25T08:00:00Z",
+      "acknowledged": true,
+      "acknowledgedBy": "Mary Wanjiku",
+      "acknowledgedAt": "2024-01-25T08:30:00Z"
+    },
+    {
+      "_id": "7",
+      "deviceId": "9",
+      "customerId": "5",
+      "type": "intrusion",
+      "severity": "critical",
+      "message": "Multiple elephant intrusions detected - immediate action required",
+      "location": "Laikipia Plateau",
+      "timestamp": "2024-01-25T18:00:00Z",
+      "acknowledged": false
+    }
+  ],
+  "dashboardMetrics": {
+    "totalCustomers": 5,
+    "totalDevices": 12,
+    "usedDevices": 9,
+    "unusedDevices": 3,
+    "totalAlerts": 7,
+    "criticalAlerts": 2,
+    "recentAlerts": [
+      {
+        "_id": "1",
+        "deviceId": "3",
+        "customerId": "1",
+        "type": "low_battery",
+        "severity": "high",
+        "message": "Device EG-003-2024 battery level critically low (23%)",
+        "location": "Sector C - South Boundary",
+        "timestamp": "2024-01-25T12:00:00Z",
+        "acknowledged": false
+      },
+      {
+        "_id": "2",
+        "deviceId": "1",
+        "customerId": "1",
+        "type": "intrusion",
+        "severity": "critical",
+        "message": "Elephant intrusion detected at North Boundary",
+        "location": "Sector A - North Boundary",
+        "timestamp": "2024-01-25T14:30:00Z",
+        "acknowledged": true,
+        "acknowledgedBy": "James Kimani",
+        "acknowledgedAt": "2024-01-25T14:35:00Z"
+      },
+      {
+        "_id": "3",
+        "deviceId": "7",
+        "customerId": "3",
+        "type": "low_battery",
+        "severity": "medium",
+        "message": "Device EG-007-2024 battery level low (45%)",
+        "location": "Tsavo West - Mzima Springs",
+        "timestamp": "2024-01-25T10:00:00Z",
+        "acknowledged": true,
+        "acknowledgedBy": "Peter Mbugua",
+        "acknowledgedAt": "2024-01-25T10:15:00Z"
+      },
+      {
+        "_id": "4",
+        "deviceId": "4",
+        "customerId": "2",
+        "type": "intrusion",
+        "severity": "high",
+        "message": "Large elephant herd detected near water source",
+        "location": "Observation Point Alpha",
+        "timestamp": "2024-01-25T16:45:00Z",
+        "acknowledged": false
+      },
+      {
+        "_id": "5",
+        "deviceId": "8",
+        "customerId": "4",
+        "type": "device_offline",
+        "severity": "medium",
+        "message": "Device EG-008-2024 has been offline for 2 hours",
+        "location": "Ewaso Nyiro River",
+        "timestamp": "2024-01-25T15:00:00Z",
+        "acknowledged": false
+      }
+    ],
+    "deviceUsageDistribution": { "used": 9, "unused": 3 },
+    "topClients": [
+      { "name": "Maasai Wildlife Conservancy", "deviceCount": 3, "location": "Maasai Mara, Kenya" },
+      { "name": "Tsavo Conservation Area", "deviceCount": 2, "location": "Tsavo National Park, Kenya" },
+      { "name": "Amboseli Elephant Trust", "deviceCount": 2, "location": "Amboseli National Park, Kenya" },
+      { "name": "Samburu National Reserve", "deviceCount": 1, "location": "Samburu, Kenya" },
+      { "name": "Laikipia Wildlife Forum", "deviceCount": 1, "location": "Laikipia, Kenya" }
+    ]
+  },
+  "billingInfo": [
+    {
+      "_id": "1",
+      "customerId": "1",
+      "customerName": "Maasai Wildlife Conservancy",
+      "plan": "premium",
+      "monthlyFee": 299,
+      "devicesIncluded": 5,
+      "additionalDeviceFee": 50,
+      "currentDevices": 3,
+      "lastBillingDate": "2024-01-01T00:00:00Z",
+      "nextBillingDate": "2024-02-01T00:00:00Z",
+      "status": "active",
+      "totalAmount": 299
+    },
+    {
+      "_id": "2",
+      "customerId": "2",
+      "customerName": "Amboseli Elephant Trust",
+      "plan": "basic",
+      "monthlyFee": 149,
+      "devicesIncluded": 3,
+      "additionalDeviceFee": 50,
+      "currentDevices": 2,
+      "lastBillingDate": "2024-01-01T00:00:00Z",
+      "nextBillingDate": "2024-02-01T00:00:00Z",
+      "status": "active",
+      "totalAmount": 149
+    }
+  ]
+}
